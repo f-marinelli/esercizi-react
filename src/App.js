@@ -3,7 +3,7 @@ import { Counter } from './Counter';
 function App() {
   return (
     <>
-      <Counter />
+      <Counter initialValue={10} incrementValue={2} incrementInterval={500} />
     </>
   );
 }
