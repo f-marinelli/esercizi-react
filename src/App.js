@@ -2,9 +2,13 @@ import { InteractiveWelcome } from './InteractiveWelcome';
 import { Login } from './Login';
 
 function App() {
+  const handleLogin = (state) => {
+    console.log(state);
+  };
+
   return (
     <>
-      <Login />
+      <Login onLogin={handleLogin} />
       <hr />
       <InteractiveWelcome />
     </>
