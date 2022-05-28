@@ -3,7 +3,7 @@ import { Welcome } from './Welcome';
 function App() {
   return (
     <div className="App">
-      <Welcome name={<strong>Fabrizio</strong>} age={34} />
+      <Welcome name="John" age={34} />
     </div>
   );
 }
