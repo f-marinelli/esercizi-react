@@ -27,7 +27,7 @@ export class UncontrolledLogin extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" name="name" />
+        <input type="text" name="name" autoFocus />
         <input type="password" name="password" />
         <input type="checkbox" name="remember" />
         <button type="submit">Login</button>
