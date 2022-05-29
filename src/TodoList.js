@@ -15,6 +15,10 @@ export class TodoList extends React.Component {
     this.setState({ todo: e.target.value });
   };
 
+  handleReset = (e) => {
+    this.setState({ items: [] });
+  };
+
   render() {
     return (
       <>
@@ -31,6 +35,9 @@ export class TodoList extends React.Component {
         />
         <button type="button" onClick={this.handleAddItem}>
           Add Item
+        </button>
+        <button type="button" onClick={this.handleReset}>
+          Reset Items
         </button>
       </>
     );
