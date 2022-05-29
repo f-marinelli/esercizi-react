@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Welcome name="Fabrizio" />
-      <Sum numeri={[1, 2, 3]} />
+      <Sum />
     </>
   );
 }
