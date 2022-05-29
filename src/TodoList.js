@@ -7,7 +7,9 @@ export class TodoList extends React.Component {
   };
 
   handleAddItem = () => {
-    this.state.items.push(this.state.todo);
+    this.setState((prevState) => {
+      return { items: [...prevState.items, this.state.todo] };
+    });
     this.setState({ todo: '' });
   };
 
@@ -19,12 +21,25 @@ export class TodoList extends React.Component {
     this.setState({ items: [] });
   };
 
+  handleRemove = (i) => {
+    this.setState((prevState) => {
+      return {
+        items: prevState.items.filter((_, index) => i !== index),
+      };
+    });
+  };
+
   render() {
     return (
       <>
         <ul>
-          {this.state.items.map((item) => (
-            <li>{item}</li>
+          {this.state.items.map((item, i) => (
+            <li key={i}>
+              <h2>{item}</h2>
+              <button type="button" onClick={this.handleRemove.bind(this, i)}>
+                Remove item
+              </button>
+            </li>
           ))}
         </ul>
         <input
