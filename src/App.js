@@ -1,5 +1,11 @@
+import { Container } from './Container';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Container title="Titolo" />
+    </>
+  );
 }
 
 export default App;
