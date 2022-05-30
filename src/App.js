@@ -1,13 +1,21 @@
+import { useState } from 'react';
 import Counter from './Counter';
 
 function App() {
+  const [mount, setMount] = useState(true);
+
   const onCounterChange = (counter) => {
     console.log(`Counter: ${counter}`);
   };
 
+  const handleMount = () => {
+    setMount((mount) => !mount);
+  };
+
   return (
     <>
-      <Counter onCounterChange={onCounterChange} />
+      <button onClick={handleMount}>Mount Counter</button>
+      {mount && <Counter onCounterChange={onCounterChange} />}
     </>
   );
 }

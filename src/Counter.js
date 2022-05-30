@@ -8,6 +8,17 @@ const Counter = (props) => {
   };
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      console.log('Counter Mounted');
+    }, 1000);
+
+    return () => {
+      console.log('Counter Unmounted');
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
     props.onCounterChange(counter);
   }, [counter, props]);
 
