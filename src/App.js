@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { LanguageContext } from './LanguageContext';
+import DisplayLanguage from './DisplayLanguage';
+import { useState } from 'react';
 
 function App() {
+  const [language, setLanguage] = useState('en');
+
+  const handleLanguage = (e) => {
+    setLanguage(e.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <select value={language} onChange={handleLanguage}>
+        <option value="en">english</option>
+        <option value="it">italiano</option>
+      </select>
+      <LanguageContext.Provider value={language}>
+        <DisplayLanguage />
+      </LanguageContext.Provider>
+    </>
   );
 }
 
