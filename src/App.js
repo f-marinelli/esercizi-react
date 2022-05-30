@@ -1,5 +1,11 @@
+import GithubUser from './GithubUser';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <GithubUser username="f-marinelli" />
+    </>
+  );
 }
 
 export default App;
