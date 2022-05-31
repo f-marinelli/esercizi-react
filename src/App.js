@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Welcome from './Welcome';
 import Counter from './Counter';
 import ShowGithubUser from './ShowGithubUser';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Welcome name="Fabrizio" />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
