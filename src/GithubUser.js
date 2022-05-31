@@ -1,7 +1,7 @@
 import { useGithubUser } from './useGithubUser';
 
 const GithubUser = ({ username }) => {
-  const { data, error, isLoading } = useGithubUser(username);
+  const { data, error } = useGithubUser(username);
 
   return (
     <>
