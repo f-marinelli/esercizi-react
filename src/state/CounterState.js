@@ -6,21 +6,21 @@ const RESET = 'COUNTER@RESET';
 
 export const incrementCounter = (by = 1) => {
   return {
-    type: 'INCREMENT',
+    type: INCREMENT,
     payload: by,
   };
 };
 
 export const decrementCounter = (by = 1) => {
   return {
-    type: 'DECREMENT',
+    type: DECREMENT,
     payload: by,
   };
 };
 
 export const resetCounter = () => {
   return {
-    type: 'RESET',
+    type: RESET,
   };
 };
 
