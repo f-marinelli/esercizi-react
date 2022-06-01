@@ -4,5 +4,6 @@ import {
   decrementCounter,
   incrementCounter,
 } from './CounterState';
+import { TodoReducer } from './TodosState';
 
-export const store = createStore(CounterReducer);
+export const store = createStore(TodoReducer);
