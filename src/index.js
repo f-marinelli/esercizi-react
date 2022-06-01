@@ -17,11 +17,11 @@ store.subscribe(() => {
 });
 
 store.dispatch(addTodo({ id: 1, title: 'React', completed: true }));
+store.dispatch(incrementCounter(5));
 store.dispatch(addTodo({ id: 2, title: 'SWR', completed: true }));
+store.dispatch(decrementCounter(2));
 store.dispatch(addTodo({ id: 3, title: 'Redux', completed: false }));
 store.dispatch(removeTodo(1));
+store.dispatch(incrementCounter(3));
 store.dispatch(removeTodo(3));
 store.dispatch(resetTodos());
-// store.dispatch(incrementCounter(5));
-// store.dispatch(incrementCounter(3));
-// store.dispatch(decrementCounter(2));
