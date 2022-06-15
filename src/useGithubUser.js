@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useGithubUser = (username) => {
+export const useGithubUser = () => {
   const [userData, setUserData] = useState();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
